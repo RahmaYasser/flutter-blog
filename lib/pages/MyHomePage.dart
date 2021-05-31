@@ -9,19 +9,19 @@ class _HomePageState extends State<MyHomePage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: 200,
-        width: 300,
-        color: Colors.black12,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: Row(
           children: [
-            Text("Home Page",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
-            Text("contact ",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
-            Text("info",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
+            Expanded(
+                flex: 1,
+                child: Container(color: Colors.black12,),),
+
+            Expanded(
+                flex: 2,
+              child: Container(color: Colors.black,),),
+            Expanded(
+                flex: 1,
+              child: Container(color: Colors.black12,),),
           ],
-        )
       ),
     );
   }
