@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_practic/widgets/LogoIcon.dart';
+import 'package:flutter_web_practic/widgets/blog_item.dart';
+import 'package:flutter_web_practic/widgets/blogs_grid.dart';
 import 'package:flutter_web_practic/widgets/headerButton.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,37 +11,38 @@ class MyHomePage extends StatefulWidget{
 }
 
 class _HomePageState extends State<MyHomePage>{
-  List _isHovering = [false, false, false];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body:Container(
-        color: Colors.white24,
+      body: Container(
+        color: Colors.grey,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child:Padding(
           padding: const EdgeInsets.only(bottom: 8.0),
-          child: Column(
-            children: [
-              Expanded( //header
-                  flex: 11,
-                  child: Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: NavigationBar()
-                  )
-              ),
-                  //padding: EdgeInsets.all(15.0),
-
-              Expanded( //home or grid
-                child: Row(),
-                flex: 10,),
-              Expanded( //footer
-                child: Row(),flex: 1,),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container( //header
+                    height: 500,
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: NavigationBar()
+                    )
+                ),
+                //padding: EdgeInsets.all(15.0),
+                SizedBox(height: 100,),
+                Text("LATEST BLOGS",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                Text("__________",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                BlogsScreen()
+              ],
+            ),
           ),
         ),
-      )
+      ),
+
     );
   }
 }
