@@ -23,7 +23,7 @@ class BlogsScreen extends StatelessWidget {
             itemBuilder: (ctx, i) {
               List<String> tags = ["general topics"];
               return BlogItem(
-                  "How To Study An Online Course Effectively",
+                  "How To Study An Online Course Effectively And Correctly",
                   "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
                   "Be active during your study breaks to improve your focus. Cardio activity boosts blood flow, which helps your brain work better. Additionally, being active may help ...",
                   tags,

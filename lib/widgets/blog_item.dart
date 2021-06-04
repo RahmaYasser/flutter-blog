@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BlogItem extends StatelessWidget {
   final String title;
@@ -34,7 +35,10 @@ class BlogItem extends StatelessWidget {
                     topRight: Radius.circular(15),
                   ),
                   child: Image.network(image, fit: BoxFit.cover,)),
-              Text(title,),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0,left: 10.0, top: 20,bottom: 20),
+                child: Text(title,style: GoogleFonts.arimo(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
+              ),
               Text(tags.toString()),
               Text(description),
             ],
