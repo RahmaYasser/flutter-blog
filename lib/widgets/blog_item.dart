@@ -35,7 +35,7 @@ class BlogItem extends StatelessWidget {
                   ),
                   child: Image.network(image, fit: BoxFit.cover,)),
               Text(title,),
-              Text(tags.toString()),
+              //Text(tags.toString()),
               Text(description),
             ],
           ),
