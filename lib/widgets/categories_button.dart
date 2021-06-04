@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CategoriesButton extends StatelessWidget {
+  final String txt;
+
+  const CategoriesButton(this.txt);
   @override
   Widget build(BuildContext context) {
     return
@@ -17,8 +20,8 @@ class CategoriesButton extends StatelessWidget {
             )),
         child: TextButton(
             child: Text(
-                "CATEGORIES",
-                style: GoogleFonts.arimo(fontSize:15.0 ,color: Color(0xff474c46),fontWeight: FontWeight.bold,letterSpacing: 3.5),
+                 txt
+                ,style: GoogleFonts.arimo(fontSize:15.0 ,color: Color(0xff474c46),fontWeight: FontWeight.bold,letterSpacing: 3.5),
             ),
             /*style: ButtonStyle(
                 padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(15)),

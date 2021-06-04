@@ -37,7 +37,7 @@ class NavigationBar extends StatelessWidget {
                   SizedBox(width: 25,),
                   HeaderButton(title: "SEARCH",customFontSize: 15.0 ),
                   SizedBox(width: 20,),
-                  CategoriesButton()
+                  CategoriesButton("CATEGORIES")
                 ],
               ),
               Spacer(),
