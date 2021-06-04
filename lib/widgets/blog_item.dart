@@ -4,7 +4,7 @@ class BlogItem extends StatelessWidget {
   final String title;
   final String image;
   final String description;
-  final String tags;
+  final List<String> tags;
   final int id;
 
 
@@ -22,15 +22,20 @@ class BlogItem extends StatelessWidget {
         child: Card(
           color: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(),
+            borderRadius: BorderRadius.circular(15),
           ),
-          elevation: 6,
-          margin: EdgeInsets.all(10),
+          elevation: 8,
+          //margin: EdgeInsets.all(10),
           child: Column(
             children: [
-              Image.network(image,height: 400,width: 400, fit: BoxFit.cover,),
+              ClipRRect(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(15),
+                  ),
+                  child: Image.network(image,height: 300, fit: BoxFit.cover,)),
               Text(title,),
-              Text(tags),
+              Text(tags.toString()),
               Text(description),
             ],
           ),

@@ -4,7 +4,7 @@ class Blog{
   final String title;
   final String image;
   final String description;
-  final String tags;
+  final List<String> tags;
   final int id;
 
  const Blog(

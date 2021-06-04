@@ -17,7 +17,7 @@ class _HomePageState extends State<MyHomePage>{
     return Scaffold(
 
       body: Container(
-        color: Colors.white54,
+        color: Colors.grey,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child:Padding(
