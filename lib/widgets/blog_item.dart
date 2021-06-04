@@ -9,13 +9,13 @@ class BlogItem extends StatelessWidget {
 
 
   BlogItem(
-  this.title, this.image, this.description, this.tags, this.id);
+      this.title, this.image, this.description, this.tags, this.id);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width/3,
-      height: MediaQuery.of(context).size.height,
+      width: (MediaQuery.of(context).size.width-300-((3-1) * 30))/3, //TODO I want to display 3 elements only (200-> 2 sides size,(3-1*30) ->sized box / num of items
+      //height: MediaQuery.of(context).size.height,
 
       child: InkWell(
         onTap: (){},
@@ -30,10 +30,10 @@ class BlogItem extends StatelessWidget {
             children: [
               ClipRRect(
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15),
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15),
                   ),
-                  child: Image.network(image,height: 300, fit: BoxFit.cover,)),
+                  child: Image.network(image, fit: BoxFit.cover,)),
               Text(title,),
               Text(tags.toString()),
               Text(description),

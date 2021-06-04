@@ -15,7 +15,7 @@ class BlogsScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Padding(
-          padding: const EdgeInsets.only(right: 100.0, left: 100.0),
+          padding: const EdgeInsets.only(right: 150.0, left: 150.0,top: 30,bottom: 30),
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
