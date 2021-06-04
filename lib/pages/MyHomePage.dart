@@ -17,7 +17,7 @@ class _HomePageState extends State<MyHomePage>{
     return Scaffold(
 
       body: Container(
-        color: Colors.grey,
+        color:Color(0xffdfe4de),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child:Padding(
@@ -35,6 +35,7 @@ class _HomePageState extends State<MyHomePage>{
                 Text("LATEST BLOGS",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
                 Text("__________",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
                 BlogsScreen()
+
               ],
             ),
           ),

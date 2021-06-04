@@ -15,13 +15,13 @@ class BlogsScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Padding(
-          padding: const EdgeInsets.only(right: 150.0, left: 150.0,top: 30,bottom: 30),
+          padding: const EdgeInsets.only(right: 150.0, left: 150.0,top: 30,bottom: 70),
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
             itemCount: blog_list.length,
             itemBuilder: (ctx, i) {
-              List<String> tags = ["general topics"];
+              String tags = "general topics";
               return BlogItem(
                   "How To Study An Online Course Effectively And Correctly",
                   "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",

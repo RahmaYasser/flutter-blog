@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_practic/widgets/tags.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BlogItem extends StatelessWidget {
   final String title;
   final String image;
   final String description;
-  final List<String> tags;
+  final String tags;
   final int id;
 
 
@@ -23,11 +24,12 @@ class BlogItem extends StatelessWidget {
         child: Card(
           color: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(20),
           ),
-          elevation: 8,
+          elevation: 10,
           //margin: EdgeInsets.all(10),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ClipRRect(
                   borderRadius: BorderRadius.only(
@@ -39,8 +41,14 @@ class BlogItem extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 10.0,left: 10.0, top: 20,bottom: 20),
                 child: Text(title,style: GoogleFonts.arimo(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold)),
               ),
-              Text(tags.toString()),
-              Text(description),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0,left: 10.0, ),
+                child: TagWidget(tags),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0,left: 10.0, top: 20,bottom: 20),
+                child: Text(description,style: GoogleFonts.roboto(fontSize: 15,color:  Color(0xff474c46),height: 1.5)),
+              ),
             ],
           ),
         ),
