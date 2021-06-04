@@ -13,22 +13,27 @@ class BlogItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){},
-      child: Card(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(),
-        ),
-        elevation: 6,
-        margin: EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Image.network(image,height: 400,width: 400, fit: BoxFit.cover,),
-            Text(title,),
-            Text(tags),
-            Text(description),
-          ],
+    return Container(
+      width: MediaQuery.of(context).size.width/3,
+      height: MediaQuery.of(context).size.height,
+
+      child: InkWell(
+        onTap: (){},
+        child: Card(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(),
+          ),
+          elevation: 6,
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Image.network(image,height: 400,width: 400, fit: BoxFit.cover,),
+              Text(title,),
+              Text(tags),
+              Text(description),
+            ],
+          ),
         ),
       ),
     );
