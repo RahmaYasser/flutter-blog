@@ -17,7 +17,7 @@ class _HomePageState extends State<MyHomePage>{
     return Scaffold(
 
       body: Container(
-        color: Colors.grey,
+        color: Colors.white54,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child:Padding(
@@ -28,10 +28,7 @@ class _HomePageState extends State<MyHomePage>{
                 Container( //header
                     height: 500,
                     width: MediaQuery.of(context).size.width,
-                    child: Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: NavigationBar()
-                    )
+                    child: NavigationBar()
                 ),
                 //padding: EdgeInsets.all(15.0),
                 SizedBox(height: 100,),
