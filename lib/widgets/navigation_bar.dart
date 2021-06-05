@@ -39,7 +39,23 @@ class NavigationBar extends StatelessWidget {
                   SizedBox(width: 25,),
                   HeaderButton(title: "SEARCH",customFontSize: 15.0 ),
                   SizedBox(width: 20,),
-                  CategoriesButton("CATEGORIES")
+                  Column(
+                    children: [
+                      CategoriesButton("CATEGORIES"),
+                      Container(
+                        width: 200, //child width
+                        height: 100,
+                        child: Column(
+                          children: [
+                            CategoriesButton("Programming"),
+                            CategoriesButton("Operating System"),
+                            CategoriesButton("Database"),
+                            CategoriesButton("General Topics"),],
+                        ),
+                      )
+
+                    ],
+                  )
                 ],
               ),
               Spacer(),
@@ -57,7 +73,9 @@ class NavigationBar extends StatelessWidget {
                 //Text("",style: GoogleFonts.indieFlower(fontSize:70.0 ,color: Color(0xff474c46),height: 1.0, )),
                 Text("arguments about \ncomputer science",style: GoogleFonts.indieFlower(fontSize:30.0 ,color: Colors.white,height: 1.0 )),
               ],
-            )),//fontWeight: FontWeight.bold,letterSpacing: 3.5),)
+            )
+        ),//fontWeight: FontWeight.bold,letterSpacing: 3.5),)
+
       ],
     );
   }

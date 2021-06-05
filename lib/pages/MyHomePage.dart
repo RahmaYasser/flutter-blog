@@ -4,6 +4,7 @@ import 'package:flutter_web_practic/widgets/blog_item.dart';
 import 'package:flutter_web_practic/widgets/blogs_grid.dart';
 import 'package:flutter_web_practic/widgets/headerButton.dart';
 import 'package:flutter_web_practic/widgets/navigation_bar.dart';
+import 'package:flutter_web_practic/widgets/social_part.dart';
 import 'package:flutter_web_practic/widgets/subscription_part.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -35,6 +36,7 @@ class _HomePageState extends State<MyHomePage>{
               Text("__________",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
               BlogsScreen(),
               SubscriptionPart(),
+              SocialPart(),
             ],
           ),
         ),

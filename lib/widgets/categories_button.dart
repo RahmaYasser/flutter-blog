@@ -10,7 +10,7 @@ class CategoriesButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       Container(
-        margin: EdgeInsets.only(right: 10,left: 10),
+       // margin: EdgeInsets.only(right: 10,left: 10),
         padding: EdgeInsets.only(right: 20,left: 20,top: 6,bottom: 6),
         decoration: BoxDecoration(
             borderRadius:  BorderRadius.all(Radius.circular(5)),
