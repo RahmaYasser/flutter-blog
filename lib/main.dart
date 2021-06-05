@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
         theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
+          highlightColor: Color(0xffc0c0c0)
         ),
       home: MyHomePage(),
     );
