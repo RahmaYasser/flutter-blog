@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_practic/widgets/LogoIcon.dart';
 import 'package:flutter_web_practic/widgets/blog_item.dart';
-import 'package:flutter_web_practic/widgets/blogs_grid.dart';
+import 'package:flutter_web_practic/Screens/blogs_screen.dart';
+import 'package:flutter_web_practic/widgets/categories_list.dart';
 import 'package:flutter_web_practic/widgets/headerButton.dart';
 import 'package:flutter_web_practic/widgets/navigation_bar.dart';
 import 'package:flutter_web_practic/widgets/social_part.dart';
@@ -25,8 +26,8 @@ class _HomePageState extends State<MyHomePage>{
         child: Stack(
           children: [Container(
             color: Colors.black,
-            child: Opacity(
-              opacity: 0.2,
+           // child: Opacity(
+             // opacity: 0.2, //TODO opacity is set to this after toggling categories button
               child: Container(
                 color:Color(0xfff6f4f1),
                 height: MediaQuery.of(context).size.height,
@@ -51,7 +52,9 @@ class _HomePageState extends State<MyHomePage>{
                 ),
               ),
             ),
-          ),]
+        //  ),
+        //  CategoriesList()
+          ]
         ),
       ),
 
