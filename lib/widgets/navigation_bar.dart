@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_practic/widgets/categories_button.dart';
 import 'package:flutter_web_practic/widgets/home_button.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'headerButton.dart';
 
 class NavigationBar extends StatelessWidget {
@@ -28,37 +27,16 @@ class NavigationBar extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
+          child: Row(
             children: [
-              Row(
-                children: [
-                  //HeaderButton(title: "RY",customFontSize: 25.0,),
-                  HomeButton("RY"),
-                  Spacer(),
-                  HeaderButton(title: "ABOUT", customFontSize: 15.0),
-                  SizedBox(width: 25,),
-                  HeaderButton(title: "SEARCH",customFontSize: 15.0 ),
-                  SizedBox(width: 20,),
-                  Column(
-                    children: [
-                      CategoriesButton("CATEGORIES"),
-                      Container(
-                        width: 200, //child width
-                        height: 100,
-                        child: Column(
-                          children: [
-                            CategoriesButton("Programming"),
-                            CategoriesButton("Operating System"),
-                            CategoriesButton("Database"),
-                            CategoriesButton("General Topics"),],
-                        ),
-                      )
-
-                    ],
-                  )
-                ],
-              ),
+              //HeaderButton(title: "RY",customFontSize: 25.0,),
+              HomeButton("RY"),
               Spacer(),
+              HeaderButton(title: "ABOUT", customFontSize: 15.0),
+              SizedBox(width: 25,),
+              HeaderButton(title: "SEARCH",customFontSize: 15.0 ),
+              SizedBox(width: 20,),
+              CategoriesButton("CATEGORIES"),
             ],
           ),
         ),

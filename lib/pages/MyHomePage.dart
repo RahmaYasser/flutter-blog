@@ -18,27 +18,40 @@ class _HomePageState extends State<MyHomePage>{
   Widget build(BuildContext context) {
     return Scaffold(
 
+
       body: Container(
-        color:Color(0xfff6f4f1),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child:SingleChildScrollView(
-          child: Column(
-            children: [
-              Container( //header
-                  height: 500,
-                  width: MediaQuery.of(context).size.width,
-                  child: NavigationBar()
+        child: Stack(
+          children: [Container(
+            color: Colors.black,
+            child: Opacity(
+              opacity: 0.2,
+              child: Container(
+                color:Color(0xfff6f4f1),
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child:SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Container( //header
+                          height: 500,
+                          width: MediaQuery.of(context).size.width,
+                          child: NavigationBar()
+                      ),
+                      //padding: EdgeInsets.all(15.0),
+                      SizedBox(height: 100,),
+                      Text("LATEST BLOGS",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                      Text("__________",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                      BlogsScreen(),
+                      SubscriptionPart(),
+                      SocialPart(),
+                    ],
+                  ),
+                ),
               ),
-              //padding: EdgeInsets.all(15.0),
-              SizedBox(height: 100,),
-              Text("LATEST BLOGS",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-              Text("__________",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-              BlogsScreen(),
-              SubscriptionPart(),
-              SocialPart(),
-            ],
-          ),
+            ),
+          ),]
         ),
       ),
 
