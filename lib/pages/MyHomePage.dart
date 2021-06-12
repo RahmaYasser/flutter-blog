@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../providers/dummy_blogs.dart';
 import 'package:flutter_web_practic/widgets/LogoIcon.dart';
 import 'package:flutter_web_practic/widgets/blog_item.dart';
 import 'package:flutter_web_practic/Screens/blogs_screen.dart';
@@ -8,6 +9,7 @@ import 'package:flutter_web_practic/widgets/navigation_bar.dart';
 import 'package:flutter_web_practic/widgets/social_part.dart';
 import 'package:flutter_web_practic/widgets/subscription_part.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget{
   @override
@@ -17,47 +19,48 @@ class MyHomePage extends StatefulWidget{
 class _HomePageState extends State<MyHomePage>{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Stack(
-          children: [Container(
-            color: Colors.black,
-           // child: Opacity(
-             // opacity: 0.2, //TODO opacity is set to this after toggling categories button
-              child: Container(
-                color:Color(0xfff6f4f1),
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                child:SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Container( //header
-                          height: 500,
-                          width: MediaQuery.of(context).size.width,
-                          child: NavigationBar()
-                      ),
-                      //padding: EdgeInsets.all(15.0),
-                      SizedBox(height: 100,),
-                      Text("LATEST BLOGS",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                      Text("__________",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                      BlogsScreen(),
-                      SubscriptionPart(),
-                      SocialPart(),
-                    ],
+    return ChangeNotifierProvider(
+      create: (cxt)=>Blogs(),
+      child: Scaffold(
+        body: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Stack(
+            children: [Container(
+              color: Colors.black,
+             // child: Opacity(
+               // opacity: 0.2, //TODO opacity is set to this after toggling categories button
+                child: Container(
+                  color:Color(0xfff6f4f1),
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  child:SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Container( //header
+                            height: 500,
+                            width: MediaQuery.of(context).size.width,
+                            child: NavigationBar()
+                        ),
+                        //padding: EdgeInsets.all(15.0),
+                        SizedBox(height: 100,),
+                        Text("LATEST BLOGS",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                        Text("__________",style: GoogleFonts.roboto(color: Color(0xff474c46),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                        BlogsScreen(),
+                        SubscriptionPart(),
+                        SocialPart(),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-        //  ),
-        //  CategoriesList()
-          ]
+          //  ),
+          //  CategoriesList()
+            ]
+          ),
         ),
-      ),
 
+      ),
     );
   }
 }

@@ -41,6 +41,7 @@ class SubscriptionPart extends StatelessWidget {
                 color: Color(0xff474c46),
               ),
               decoration: InputDecoration(
+                prefixIcon: Icon(Icons.email,color: Color(0xff474c46),),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.white, width: 2.0),
                 ),

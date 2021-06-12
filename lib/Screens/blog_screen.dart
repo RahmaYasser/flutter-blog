@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_practic/dummy_blogs.dart';
-import 'package:flutter_web_practic/models/blogs.dart';
+import 'package:flutter_web_practic/providers/dummy_blogs.dart';
+import 'package:flutter_web_practic/models/blog.dart';
 
 import '../widgets/blog_item.dart';
 
 class BlogScreen extends StatelessWidget {
-  final blog_list = DUMMY_BLOGS.toList();
+  //final blog_list = DUMMY_BLOGS;
 
   @override
   Widget build(BuildContext context) {
