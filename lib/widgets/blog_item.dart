@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_practic/Screens/blog_screen.dart';
 import 'package:flutter_web_practic/models/blog.dart';
 import 'package:flutter_web_practic/widgets/tags.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../routes.dart';
 
 class BlogItem extends StatelessWidget {
   final Blog blog;
 
   const BlogItem({Key key, this.blog}) : super(key: key);
-
-
-
-
+  void selectBlog(BuildContext cxt){
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,9 @@ class BlogItem extends StatelessWidget {
       //height: MediaQuery.of(context).size.height,
 
       child: InkWell(
-        onTap: (){},
+        onTap: (){
+          Navigator.pushNamed(context, RoutesName.);
+        },
         child: Card(
           color: Colors.white,
           shape: RoundedRectangleBorder(
